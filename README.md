@@ -13,4 +13,22 @@ There are certain validation.This will be checked if you want to add new user or
 | 1 | There should be unique pair of userName and phoneNumber | if you have added (Ram , 1234567890) in user than you cannot again add it.But the name "Ram" can come with any other "phoneNumber" and viceversa
 | 2 | length of userName should be greater than 0 and less than 50 and phoneNumber length should be 10 | Ram , 1234567890
 | 3 | All the parameters in requestbody(given below) along with its respective type is mandatory |
-| 4 | You cannot add "lendorId" or "borrowerId" which don't exist in user collection(To know your id you can make use of 3rd api in above table)
+| 4 | You cannot add "lendorId" or "borrowerId" which don't exist in user collection(To know your id you can make use of 3rd api in above table)Request
+
+Expected RequestBody 
+1.User #(should be dict)
+{
+    "name" : "balu",
+    "phoneNumber" : "8992637382" #(only integer needed)
+}
+
+2.Contract #(should be dict)
+{
+    "lendorId" : "631ae604582e80a20b11afb0", #(should be objectId)
+    "borrowerId" : "631ae15c12f5bcf59ae195b3", #(should be objectId)
+    "isRepaid" : false, #(only bool needed)
+    "principle" : 400,  #(only integer needed)
+    "interestRate" : 6, #(only integer needed)
+    "loanStartDate" : "23/6/2022",
+    "loanDueDate" : "12/8/2022"
+}
