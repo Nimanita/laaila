@@ -22,9 +22,9 @@ Expected RequestBody
     "phoneNumber" : "8992637382" #(only integer needed)
 }
 
-2.Contract #(should be dict)
-{
-    "lendorId" : "631ae604582e80a20b11afb0", #(should be objectId)
+2.Contract #(should be dict)<br/>
+{<br/>
+    "lendorId" : "631ae604582e80a20b11afb0", #(should be objectId)<br/>
     "borrowerId" : "631ae15c12f5bcf59ae195b3", #(should be objectId)
     "isRepaid" : false, #(only bool needed)
     "principle" : 400,  #(only integer needed)
