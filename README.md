@@ -25,10 +25,10 @@ Expected RequestBody
 2.Contract #(should be dict)<br/>
 {<br/>
     "lendorId" : "631ae604582e80a20b11afb0", #(should be objectId)<br/>
-    "borrowerId" : "631ae15c12f5bcf59ae195b3", #(should be objectId)
-    "isRepaid" : false, #(only bool needed)
-    "principle" : 400,  #(only integer needed)
-    "interestRate" : 6, #(only integer needed)
-    "loanStartDate" : "23/6/2022",
-    "loanDueDate" : "12/8/2022"
-}
+    "borrowerId" : "631ae15c12f5bcf59ae195b3", #(should be objectId)<br/>
+    "isRepaid" : false, #(only bool needed)<br/>
+    "principle" : 400,  #(only integer needed)<br/>
+    "interestRate" : 6, #(only integer needed)<br/>
+    "loanStartDate" : "23/6/2022",<br/>
+    "loanDueDate" : "12/8/2022"<br/>
+}<br/>
