@@ -13,6 +13,10 @@ def handleUserOperation(request):
         requestBody = JSONParser().parse(request)
         
         return userService.addUser(requestBody)
+    
+    if request.method == 'GET':
+        return userService.getUsers(True)
+
 
 @api_view(['GET', 'POST'])
 #@permission_classes([IsAuthenticated])

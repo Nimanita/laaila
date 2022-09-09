@@ -20,6 +20,7 @@ class contractsService:
         try:
             result , message = Validator.validateContract(contract)
             if not result:
+                print(message)
                 return ResponseFormatter.formatAndReturnResponse({"message" : message}, status.HTTP_400_BAD_REQUEST, isUI)
             isExist , message = cls.isContractExist(contract)
             if isExist:
@@ -142,7 +143,7 @@ class contractsService:
                 
                 if userId in groupedlendorNamesMap:
                     userdetail["borrowerCount"] = groupedlendorNamesMap[userId]["count"]
-                    userdetail["borrowerAverageAmount"] = groupedlendorNamesMap[userId]["avg"]
+                    userdetail["borrowerAverageAmount"] = round(float(groupedlendorNamesMap[userId]["avg"]),2)
                     userdetail["borrowerDetails"] = groupedlendorNamesMap[userId]["borrowerDetails"]
                    
                     
@@ -156,7 +157,7 @@ class contractsService:
                     
                 if userId in groupedborrowerNamesMap:
                     userdetail["lendorCount"] = groupedborrowerNamesMap[userId]["count"]
-                    userdetail["lendorAverageAmount"] = groupedborrowerNamesMap[userId]["avg"]
+                    userdetail["lendorAverageAmount"] = round(float(groupedborrowerNamesMap[userId]["avg"]) , 2)
                     userdetail["lendorDetails"] = groupedborrowerNamesMap[userId]["lendorDetails"]
                    
                     for lendordetail in userdetail["lendorDetails"]:

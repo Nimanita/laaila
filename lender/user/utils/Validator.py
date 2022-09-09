@@ -31,7 +31,7 @@ class Validator:
     @classmethod
     def validateContract(cls, contract):
         
-        keys = ["principle" , "lendorId" , "borrowerId" , "loanStartDate" , "loanDueDate" , "isRepaid"]
+        keys = ["principle" , "lendorId" , "borrowerId" , "loanStartDate" , "loanDueDate" , "isRepaid" , "interestRate"]
         if not(isinstance(contract, dict)):
             return False , "Invalid Contract type"
         
@@ -40,6 +40,8 @@ class Validator:
                 return False , "Incomplete Contract info"
             if key == "principle" and not(isinstance(contract["principle"], int)):
                 return False , "Invalid principle type"
+            if key == "interestRate" and not(isinstance(contract["interestRate"], int)):
+                return False , "Invalid interestRate type"
             if key == "isRepaid" and not(isinstance(contract["isRepaid"], bool)):
                 return False , "Invalid isRepaid type"
         
