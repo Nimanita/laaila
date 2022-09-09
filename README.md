@@ -15,20 +15,20 @@ There are certain validation.This will be checked if you want to add new user or
 | 3 | All the parameters in requestbody(given below) along with its respective type is mandatory |
 | 4 | You cannot add "lendorId" or "borrowerId" which don't exist in user collection(To know your id you can make use of 3rd api in above table)Request
 
-Expected RequestBody 
-1.User #(should be dict)
-{
-    "name" : "balu",
-    "phoneNumber" : "8992637382" #(only integer needed)
-}
+Expected RequestBody<br/> 
+1.**User** #(should be dict)<br/>
+**{**<br/>
+    **"name" : "balu",<br/>**
+    **"phoneNumber" : "8992637382"** #(only integer needed)<br/>
+**}**<br/>
 
-2.Contract #(should be dict)<br/>
-{<br/>
-    "lendorId" : "631ae604582e80a20b11afb0", #(should be objectId)<br/>
-    "borrowerId" : "631ae15c12f5bcf59ae195b3", #(should be objectId)<br/>
-    "isRepaid" : false, #(only bool needed)<br/>
-    "principle" : 400,  #(only integer needed)<br/>
-    "interestRate" : 6, #(only integer needed)<br/>
-    "loanStartDate" : "23/6/2022",<br/>
-    "loanDueDate" : "12/8/2022"<br/>
-}<br/>
+2.**Contract** #(should be dict)<br/>
+**{**<br/>
+    **"lendorId" : "631ae604582e80a20b11afb0",** #(should be objectId)<br/>
+    **"borrowerId" : "631ae15c12f5bcf59ae195b3",** #(should be objectId)<br/>
+    **"isRepaid" : false,** #(only bool needed)<br/>
+    **"principle" : 400,**  #(only integer needed)<br/>
+    **"interestRate" : 6,** #(only integer needed)<br/>
+    **"loanStartDate" : "23/6/2022",**<br/>
+    **"loanDueDate" : "12/8/2022"**<br/>
+**}**<br/>
